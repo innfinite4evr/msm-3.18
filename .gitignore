@@ -96,3 +96,13 @@ x509.genkey
 
 # Kconfig presets
 all.config
+
+# cust
+build_10or_D.sh
+zimage/*
+cb2.sh
+out
+linaro-64
+zimage
+gcc-4.9
+*.sh
