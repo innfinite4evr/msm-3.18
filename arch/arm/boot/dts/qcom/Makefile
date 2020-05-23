@@ -1,4 +1,4 @@
-dtb-$(CONFIG_ARCH_MSM8917) += msm8917-10or_d.dtb
+dtb-$(CONFIG_ARCH_MSM8917) += 10orD_N.dtb
 
 ifeq ($(CONFIG_ARM64),y)
 always          := $(dtb-y)
