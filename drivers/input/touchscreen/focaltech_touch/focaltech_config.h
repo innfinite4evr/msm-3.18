@@ -85,7 +85,7 @@
 /*
  * choose your ic chip type of focaltech
  */
-#define FTS_CHIP_TYPE   _FT3267
+#define FTS_CHIP_TYPE   _FT6336U
 
 /******************* Enables *********************/
 /*********** 1 to enable, 0 to disable ***********/
@@ -94,7 +94,7 @@
  * show debug log info
  * enable it for debug, disable it for release
  */
-#define FTS_DEBUG_EN                            0
+#define FTS_DEBUG_EN                            1
 
 /*
  * Linux MultiTouch Protocol
@@ -107,7 +107,7 @@
  * Report Pressure in multitouch
  * 1:enable(default),0:disable
 */
-#define FTS_REPORT_PRESSURE_EN                  1
+#define FTS_REPORT_PRESSURE_EN                  0
 
 /*
  * Force touch support
@@ -121,7 +121,7 @@
  * Gesture function enable
  * default: disable
  */
-#define FTS_GESTURE_EN                          1
+#define FTS_GESTURE_EN                          0
 
 /*
  * ESD check & protection
@@ -155,7 +155,7 @@
  * Proximity sensor
  * default: disable
  */
-#define FTS_PSENSOR_EN                          0
+#define FTS_PSENSOR_EN                          1
 
 /*
  * Nodes for tools, please keep enable
@@ -189,9 +189,9 @@
  */
 #define FTS_AUTO_CLB_EN                         0
 
-/*
+/* 
  * Check vendor_id number
- * 0:No check vendor_id (default)
+ * 0:No check vendor_id (default)  
  * 1/2/3: Check vendor_id for vendor compatibility
  */
 #define FTS_GET_VENDOR_ID_NUM                   0
@@ -211,28 +211,28 @@
 /*
  * FW_APP.i file for auto upgrade, you must replace it with your own
  * define your own fw_app, the sample one to be replaced is invalid
- * NOTE: if FTS_GET_VENDOR_ID_NUM >= 1,
- *       it's the fw corresponding with FTS_VENDOR_1_ID
+ * NOTE: if FTS_GET_VENDOR_ID_NUM >= 1, it's the fw corresponding with FTS_VENDOR_1_ID
  */
-#define FTS_UPGRADE_FW_APP		"include/firmware/FT8716_app_sample.i"
+#define FTS_UPGRADE_FW_APP                      "include/firmware/LQ_L8600_FT6336U_app.i"
 
 /*
  * if FTS_GET_VENDOR_ID_NUM >= 2, fw corrsponding with FTS_VENDOR_2_ID
  * define your own fw_app, the sample one is invalid
  */
-#define FTS_UPGRADE_FW2_APP		"include/firmware/FT8716_app_sample.i"
+#define FTS_UPGRADE_FW2_APP                     "include/firmware/FT8716_app_sample.i"
 
 /*
  * if FTS_GET_VENDOR_ID_NUM == 3, fw corrsponding with FTS_VENDOR_3_ID
  * define your own fw_app, the sample one is invalid
  */
-#define FTS_UPGRADE_FW3_APP		"include/firmware/FT8716_app_sample.i"
+#define FTS_UPGRADE_FW3_APP                     "include/firmware/FT8716_app_sample.i"
 
 /*
  * lcd_cfg.i file for lcd cfg upgrade
  * define your own lcd_cfg.i, the sample one is invalid
  */
-#define FTS_UPGRADE_LCD_CFG		"include/firmware/lcd_cfg.i"
+//Note: Not used! Please Ignore it!
+//#define FTS_UPGRADE_LCD_CFG                     "include/firmware/lcd_cfg.i"
 
 /*
  * upgrade stress test for debug
@@ -246,3 +246,4 @@
 /*********************************************************/
 
 #endif /* _LINUX_FOCLATECH_CONFIG_H_ */
+
